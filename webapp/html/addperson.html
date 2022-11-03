@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .Content-Main{
+            max-width: 500px;
+            margin: auto;
+            border: none;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-shadow: 1px 1px 1px #444;
+            color: #D3D3D3;
+            background: #555;
+        }
+        .Content-Main label{
+            margin: 0px 0px 5px;
+            display: block;
+        }
+        .Content-Main label>span{
+            width: 20%;
+            float: left;
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .Main-sex{
+            padding-right: 13px;
+            padding-bottom: 13px;
+            font-weight: bold;
+            line-height: 4px;
+        }
+        .Main-sex input[type=checkbox]{
+            margin-top:6px;
+            vertical-align:middle;
+        }
+        .Content-Main input[type="text"],.Content-Main textarea{
+            height: 25px;
+            width: 70%;
+            line-height: 15px;
+            padding: 5px 0px 5px 5px;
+            margin-bottom: 16px;
+            margin-right: 6px;
+            margin-top: 2px;
+            border: none;
+            border-radius:2px;
+            -webkit-border-radius:2px;
+            -moz-border-radius:2px;
+            outline: 0 none;
+            background:  #DFDFDF;
+            color: #525252;
+        }
+        .Content-Main textarea{
+            height: 100px;
+            width: 70%;
+            padding: 5px 0px 0px 5px;
+        }
+        .Content-Main .button{
+            padding: 8px 24px 8px 24px;
+            /*margin-bottom: 8px;*/
+            margin : 16px 0px 17px 230px;
+            border: none;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #FFE477;
+            box-shadow: 1px 1px 1px  #3D3D3D;
+            -moz-box-shadow: 1px 1px 1px  #3D3D3D;
+            -webkit-box-shadow: 1px 1px 1px  #3D3D3D;
+            color: #585858;
+            background: #f6ff0a;
+        }
+        .Content-Main .button:hover{
+            color:  #333;
+            background-color:  #EBEBEB ;
+        }
+    </style>
+</head>
+<body>
+<div class="Content-Main">
+    <form  action="" method="post" class="form-个人信息表t">
+        <h1>完美个人信息</h1>
+        <div class="list-1">
+            <h4>参赛者个人信息</h4>
+            <label>
+                <span>学院:</span>
+                <input type="text" name="institute">
+            </label>
+            <label>
+                <span>班级:</span>
+                <input type="text" name="class">
+            </label>
+            <label>
+                <span>姓名:</span>
+                <input type="text"  name="name">
+            </label>
+            <label>
+                <span>学号:</span>
+                <input type="text"  name="studentId">
+            </label>
+            <label class="Main-sex">
+                <span>性别:</span>
+                <input type="checkbox" name="man">男
+                <input type="checkbox" name="women">女
+            </label>
+            <label>
+                <span>年龄:</span>
+                <input type="text" name="age">
+            </label>
+
+            <label>
+                <span>联系电话:</span>
+                <input type="text" name="contect">
+            </label>
+            <label>
+                <input type="button" class="button" value="提交">
+            </label>
+        </div>
+    </form>
+
+</div>
+
+
+</body>
+</html>

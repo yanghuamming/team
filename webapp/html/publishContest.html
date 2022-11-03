@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style type="text/css">
+    .Content-Main{
+      max-width: 500px;
+      margin: auto;
+      border: none;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-shadow: 1px 1px 1px #444;
+      color: #D3D3D3;
+      background: #555;
+    }
+    .Content-Main label{
+      margin: 0px 0px 5px;
+      display: block;
+    }
+    .Content-Main label>span{
+      width: 20%;
+      float: left;
+      text-align: right;
+      padding-right: 10px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .Main-sex input[type=checkbox]{
+      margin-top:6px;
+      vertical-align:middle;
+    }
+    .Content-Main input[type="text"],.Content-Main textarea{
+      height: 25px;
+      width: 70%;
+      line-height: 15px;
+      padding: 5px 0px 5px 5px;
+      margin-bottom: 16px;
+      margin-right: 6px;
+      margin-top: 2px;
+      border: none;
+      border-radius:2px;
+      -webkit-border-radius:2px;
+      -moz-border-radius:2px;
+      outline: 0 none;
+      background:  #DFDFDF;
+      color: #525252;
+    }
+    .Content-Main textarea{
+      height: 100px;
+      width: 70%;
+      padding: 5px 0px 0px 5px;
+    }
+    .Content-Main .button{
+      padding: 8px 24px 8px 24px;
+      /*margin-bottom: 8px;*/
+      margin : 16px 0px 17px 208px;
+      border: none;
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px #FFE477;
+      box-shadow: 1px 1px 1px  #3D3D3D;
+      -moz-box-shadow: 1px 1px 1px  #3D3D3D;
+      -webkit-box-shadow: 1px 1px 1px  #3D3D3D;
+      color: #585858;
+      background: #f6ff0a;
+    }
+    .Content-Main .button:hover{
+      color:  #333;
+      background-color:  #EBEBEB ;
+    }
+   .Content-Main input.time{
+      color: #999;
+    }
+   select{
+     height: 25px;
+     width: 70%;
+     line-height: 15px;
+     padding: 5px 0px 5px 5px;
+     margin-bottom: 16px;
+     margin-right: 6px;
+     margin-top: 2px;
+     border: none;
+     border-radius:2px;
+     -webkit-border-radius:2px;
+     -moz-border-radius:2px;
+     outline: 0 none;
+     background:  #DFDFDF;
+     color: #525252;
+
+     height: 100px;
+     width: 70%;
+     padding: 5px 0px 0px 5px;
+   }
+
+   .content{
+     resize: none;
+   }
+  </style>
+</head>
+<body>
+<div class="Content-Main">
+  <form  action="http://localhost:8080/b_war_exploded/PublishContest" method="post" class="form-个人信息表t">
+    <h1>发布比赛</h1>
+    <div class="list-1">
+      <h4>比赛信息</h4>
+      <label>
+        <span>比赛名称</span>
+        <input type="text"  name="contestName">
+      </label>
+      <label>
+        <span>比赛类型:</span>
+          <select name="contestType" style="width:170px;height:21.33px;" >
+            <option>思想成长</option>
+            <option>创新创业</option>
+            <option>实践实习</option>
+            <option>文体活动</option>
+            <option>技能特长</option>
+            <option>志愿服务</option>
+          </select>
+      </label>
+      <label>
+        <span>比赛内容:</span>
+        <textarea class="contestDetail" name="contestDetail"></textarea>
+<!--        <input type="text" class="contentDetail"> -->
+      </label>
+      <label>
+        <span>报名时间:</span>
+        <input type="text" class="time" value="xxxx-xx-xx" name="startTime">
+      </label>
+      <label>
+        <span>报名截止时间:</span>
+        <input type="text" class="time" value="xxxx-xx-xx" name="endTime">
+      </label>
+
+      <label>
+        <span>联系方式:</span>
+        <input type="text"  name="contact">
+      </label>
+      <label>
+        <span>比赛时间:</span>
+        <input type="text" class="time" value="xxxx-xx-xx" name="contestTime">
+      </label>
+      <label>
+        <span>比赛地点:</span>
+        <input type="text" name="contestVenue">
+      </label>
+      <label>
+        <span>奖项设置:</span>
+        <input type="text" name="award">
+      </label>
+      <label>
+        <span>主办方:</span>
+        <input type="text" name="sponsor">
+      </label>
+      <label>
+        <span>参赛对象:</span>
+        <input type="text" name="contestant">
+      </label>
+      <label>
+        <input type="submit" class="button" value="提交">
+      </label>
+    </div>
+  </form>
+
+</div>
+
+<script>
+  var time = document.querySelectorAll(".time");
+  console.log(time)
+  for(var i=0;i<time.length;i++){
+  time[i].addEventListener('focus',function (){
+    if(this.value == 'xxxx-xx-xx'){
+      this.value = '';
+    }
+    this.style.color = '#333';
+  })
+  time[i].addEventListener('blur',function (){
+    if(this.value == ''){
+      this.value = 'xxxx-xx-xx';
+    }
+    this.style.color = '#999';
+  })}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <ul class= teams>
+    <ul class="team" >
+    <li>队伍1</li>
+    <li>口号：我爱你一万年</li>
+    <li>成员：3人</li>
+    <li class="button"><button>申请加入</button></li>
+    </ul>
+    <ul class="team">
+      <li>队伍1</li>
+      <li>口号：我爱你一万年</li>
+      <li>成员：3人</li>
+      <li class="button"><button>申请加入</button></li>
+
+    </ul>
+    <ul class="team">
+      <li>队伍1</li>
+      <li>口号：我爱你一万年</li>
+      <li>成员：3人</li>
+      <li class="button"><button>申请加入</button></li>
+    </ul>
+    <ul class="team">
+      <li>队伍1</li>
+      <li>口号：我爱你一万年</li>
+      <li>成员：3人</li>
+      <li class="button"><button>申请加入</button></li>
+    </ul>
+    <ul class="team">
+      <li>队伍1</li>
+      <li>口号：我爱你一万年</li>
+      <li>成员：3人</li>
+      <li class="button"><button>申请加入</button></li>
+    </ul>
+  </ul>
+</div>
+
+<script>
+
+</script>
+
+<style>
+  div{
+    width: 1200px;
+    height: auto;
+    margin: 40px auto;
+
+  }
+
+
+  .team{
+    position: relative;
+    display: block;
+  }
+  .team li{
+    list-style: none;
+    display: block;
+    width: 300px;
+    height: 70px;
+    background: #6aa01f;
+    float: left;
+    margin: 30px -10px 0px 10px;
+    line-height: 70px;
+    text-align: center;
+  }
+  .team .button{
+    list-style: none;
+    display: block;
+    width: 100px;
+    height: 70px;
+    background: #6aa01f;
+    float: left;
+    margin: 30px -10px 0px 10px;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  button{
+   /*position: absolute;*/
+   /* left: 967px;*/
+   /* top: 47px;*/
+    padding: 8px 24px 8px 24px;
+    /*margin-bottom: 8px;*/
+    /*margin : 16px 0px 17px 230px;*/
+    margin: 0px -3px 4px -28px;
+    border: none;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #FFE477;
+    box-shadow: 1px 1px 1px  #3D3D3D;
+    -moz-box-shadow: 1px 1px 1px  #3D3D3D;
+    -webkit-box-shadow: 1px 1px 1px  #3D3D3D;
+    color: #585858;
+    background: #f6ff0a;
+  }
+  button:hover{
+    color: #333;
+    background: #FFF;
+  }
+</style>
+<script src="../js/lib/axios-0.18.0.js"></script>
+<script>
+  //1. 当页面加载完成后，发送ajax请求
+  window.onload = function () {
+    //2. 发送ajax请求
+    axios({
+      method:"get",
+      url:"http://5u1163329j.eicp.vip/b_war_exploded/MainServlet"
+    }).then(function (resp) {
+      //获取数据
+      let brands = resp.data;
+    })
+  }
+</script>
+</body>
+</html>

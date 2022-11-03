@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.ele{
+		height: 20px;
+	}
+	ul{
+		list-style: none;
+	}
+	ul li {
+		padding-right: 300px;
+		float: left;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+	}
+	.active a {
+		border-bottom: 2px solid #F40;
+	}
+	a:hover{
+		color: #f40;
+	}
+	.elec {
+		width: 220px;
+		margin-top: 5px;
+		margin-left: 40px;
+		text-align:center;
+	}
+	.elec p {
+		padding-left: 2px;
+		border-left: 1px solid #f40;
+		font-size: 14px;
+	}
+	table{
+		width:800px;
+		height:300px;
+		border-collapse :collapse ;
+		margin:0 auto;
+	}
+	td{
+		width:100px;
+		height:40px;
+		border :1px solid black;
+		font-size:16px;
+		text-align :center;
+	}
+</style>
+</head>
+<body>
+<div class="ele">
+	<ul>
+			<li class="active"><a href="#">个人信息</a></li>
+			<li ><a href="#">我的队伍</a></li>
+			<li ><a href="#">我的比赛</a></li>
+			
+		</ul>
+	</div>
+<div class="elec" style="display: block">
+	<table>
+		<tr>
+		<td>姓名：张三</td>
+		<td>用户名：李四</td>
+		<td>性别：女</td>
+			</tr>
+		<tr>
+		<td>年龄：20</td>
+		<td>学院：电子与信息</td>
+		<td>班级：计科本</td>
+			</tr>
+		<tr>
+		<td>联系电话：123456789</td>
+		<td></td>
+		<td></td>
+			</tr>
+		</table>
+	</div>	
+<div class="elec" style="display: none;">
+	<p>
+		<table>
+			<tr>
+				<td>队名</td>
+				<td>队长</td>
+				<td>队员</td>
+			</tr>
+			<tr>
+				<td>队名</td>
+				<td>队长</td>
+				<td>队员</td>
+			</tr>
+			<tr>
+				<td>队名</td>
+				<td>队长</td>
+				<td>队员</td>
+			</tr>
+		</table>
+
+	</div>
+<div class="elec" style="display: none;">
+	<p>
+	<div class="contest" v-cloak,name="contestName">比赛名称：软件工程设计大赛</div>
+
+	<div class="contest" v-cloak>比赛类型：技能特长</div>
+
+	<div class="contest" v-cloak>报名开始时间：20220.06.03</div>
+
+	<div class="contest" v-cloak>报名截止时间：20220.06.03</div>
+
+	<div class="contest" v-cloak>联系方式：1111111</div>
+
+	<div class="contest" v-cloak>比赛时间：2020.06.04</div>
+
+	<div class="contest" v-cloak>地点：北部湾大学</div>
+
+	<div class="contest" v-cloak>发起单位：北部湾大学</div>
+
+	<div class="contest" v-cloak>参赛者：学生</div>
+	</p>
+</div>
+<div>
+	<p></p>
+	<a class="u2" href="register.html">退出登录</a>
+	<a class="u2" href="main.html">主页</a>
+	<a class="u2" href="personal information.html">完善个人信息</a>
+
+</div>
+<script type="text/javascript">
+window.onload = function(){
+	var obtn = document.getElementsByTagName("li");
+	var oElec = document.getElementsByClassName("elec");
+	var i = 0;
+	for(i = 0;i < obtn.length;i++){
+		obtn[i].index = i;
+		obtn[i].onclick = function(){
+			for(var j = 0;j < obtn.length;j++){
+				obtn[j].className = "";
+				oElec[j].style.display = 'none';
+			}
+			this.className = "active";
+			oElec[this.index].style.display = "block";
+		};
+	}
+};
+</script>
+
+</body>
+</html>

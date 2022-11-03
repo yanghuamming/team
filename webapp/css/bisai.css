@@ -1,0 +1,118 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li {
+            list-style: none;
+        }
+        body {
+             /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+            -webkit-font-smoothing: antialiased;
+            background-color: #fafafa;
+            font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+        }
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+.right {
+    float: left;
+    width: 200px;
+}
+        .crouse {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+        }
+        .crouse img {
+            width: 200px;
+            height: 200px;
+        }
+        .tab_list {
+            width: 200px;
+        }
+        .tab_list ul li {
+            height: 50px;
+            line-height: 50px;
+            margin-left: 2px;
+            padding-left: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 2px solid #fafafa;
+        }
+        .tab_list ul li:hover {
+            background-color: skyblue;
+            color: #fff;
+        }
+        .tab_con {
+            float: right;
+            width: 1100px;
+            height: 900px;
+            margin-top: 10px;
+            background-color: #fff;
+        }
+        .item {
+            display: none;
+            border: transparent;
+        }
+        .tab_list .current {
+            background-color: skyblue;
+            color: #fff;
+        }
+        
+        .item p {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            margin-left: 20px;
+            border-bottom: 2px solid #fafafa;
+            color: #9ba6a9;
+        }
+        .item .head {
+            margin: 20px 20px;
+            color: #7e7e7e;
+            font-size: 24px;
+        }
+        .crouse_mine li {
+            width: 100%;
+            height: 40px;
+            background-color: skyblue;
+            margin-top: 10px;
+        }
+        .crouse_mine li a {
+            line-height: 40px;
+            padding-left: 20px;
+        }
+        .item div {
+             width: 100%;
+            height: 40px;
+            padding: 0px 0px 0px 60px;
+            color: #7e7e7e;
+         }
+        .red2{
+	     width:1175px;
+	     height:auto;
+	     margin:0px auto;
+	     background-color:pink;
+	     text-indent:2em;
+         }
+        .red2 ol li {
+         font-size: 20px;
+         word-wrap: break-word;
+         color: blue;
+         margin-bottom: 30px;
+         }
+        .red2 h1, h3 {
+         color: green;
+         margin: 30px;
+         padding: 0px;
+         }
+            .red2 ll li {
+                font-size: 20px;
+                word-wrap: break-word;
+                color: blue;
+                display: inline;
+                margin-bottom: 30px
+            }
+    
